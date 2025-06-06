@@ -2,7 +2,7 @@ import UserGreetings from './UserGreetings.jsx';
 
 function App() {
   return (
-    <UserGreetings username="Dann"/>
+    <UserGreetings username="Dann" isLoggedIn={true}/>
   );
 }
 
