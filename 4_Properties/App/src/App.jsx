@@ -1,13 +1,8 @@
-import Student from "./Student";
+import UserGreetings from './UserGreetings.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Student Information</h1>
-      <Student name="John Doe" age={20} isStudent={true} />
-      <Student name="Jane Smith" age={22} isStudent={false} />
-      <Student />
-    </div>
+    <UserGreetings username="Dann"/>
   );
 }
 
