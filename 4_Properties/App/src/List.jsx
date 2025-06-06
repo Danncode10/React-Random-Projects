@@ -1,26 +1,23 @@
-import List from './List.jsx'
 
-function App() {
 
-    const fruits = [{id: 1, name: "apple", calories: 95}, 
-                    {id: 2, name: "orange", calories: 45}, 
-                    {id: 3, name: "banana", calories: 105}, 
-                    {id: 4, name: "coconut", calories: 159}, 
-                    {id: 5, name: "pineapple", calories: 37}];
-    fruits.sort((a, b) => a.calories - b.calories);
-
-    const lowCalorieFruits = [];
-    const highCalorieFruits = [];
-    for (const fruit of fruits) {
-        if (fruit.calories < 100) {
-            lowCalorieFruits.push(fruit);
+function List(
+    items = [{id: 1, name: "Sample", calories: 0},],
+    category = "none",
+    ){
+    
+    const lowCalorie = [];
+    const highCalorie = [];
+    for (const fruit of items) {
+        if (fruit.calories < getCalorie.value) {
+            lowCalorie.push(fruit);
         }
         else {
-            highCalorieFruits.push(fruit);
+            highCalorie.push(fruit);
         }
     }
 
-    const listItems = lowCalorieFruits.map(fruit => (
+
+    const listItems = lowCalorie.map(fruit => (
         <li key={fruit.id}>
             {fruit.name} - {fruit.calories} calories
         </li>
