@@ -8,10 +8,15 @@ function App() {
                     {id: 4, name: "coconut", calories: 159}, 
                     {id: 5, name: "pineapple", calories: 37}];
     fruits.sort((a, b) => a.calories - b.calories);
+
     const lowCalorieFruits = [];
+    const highCalorieFruits = [];
     for (const fruit of fruits) {
         if (fruit.calories < 100) {
             lowCalorieFruits.push(fruit);
+        }
+        else {
+            highCalorieFruits.push(fruit);
         }
     }
 
