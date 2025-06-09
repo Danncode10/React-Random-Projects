@@ -2,24 +2,36 @@ import React, { useState } from 'react';
 
 function MyComponent() {
 
-    const [payment, setPayment] = useState("");
+    const [shipping, setShipping] = useState("Delivery");
 
-    function updatePayment(event) {
-        setPayment(event.target.value);
+    function updateShipping(event) {
+        setShipping(event.target.value);
     }
 
     return(
         <div>
-            <select value={payment} onChange={updatePayment}>
+            <label>
+                <input
+                    type="radio"
+                    value="Pick Up"
+                    checked={shipping === "Pick Up"}
+                    onChange={updateShipping}
+                />
+                Pick Up
+            </label>
+            <br />
+            <label>
+                <input
+                    type="radio"
+                    value="Delivery"
+                    checked={shipping === "Delivery"}
+                    onChange={updateShipping}
+                />
+                Delivery
+            </label>
 
-                <option value="">Select Payment Method</option>
-                <option value="credit">Credit Card</option>
-                <option value="debit">Debit Card</option>
-                <option value="paypal">PayPal</option>
-
-            </select>
-
-            <p>Selected Payment Method: {payment}</p>
+            <p> Shipping: {shipping}</p>
+            
         </div>
     );
 }
@@ -47,7 +59,11 @@ export default MyComponent;
 //         setComment(event.target.value);
 //     }
 
+// const [payment, setPayment] = useState("");
 
+//     function updatePayment(event) {
+//         setPayment(event.target.value);
+//     }
 
 //     return(
 //         <div>
@@ -59,6 +75,16 @@ export default MyComponent;
 
 //             <textarea value={comment} onChange={updateComment} placeholder="Tell me what you want" />
 //             <p>Comment: {comment}</p>
+            // <select value={payment} onChange={updatePayment}>
+
+            //                 <option value="">Select Payment Method</option>
+            //                 <option value="credit">Credit Card</option>
+            //                 <option value="debit">Debit Card</option>
+            //                 <option value="paypal">PayPal</option>
+
+            //             </select>
+
+            //             <p>Selected Payment Method: {payment}</p>
 //         </div>
 //     )
 // }
