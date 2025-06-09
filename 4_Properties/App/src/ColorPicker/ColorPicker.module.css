@@ -7,3 +7,28 @@
   font-family: sans-serif, Arial, Helvetica, sans-serif;
 
 }
+
+.color-display{
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+
+    /* Center Align */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .color-display p{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+.display-color-value{
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
