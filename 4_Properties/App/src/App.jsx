@@ -1,10 +1,10 @@
-import FoodList from './FoodList.jsx'
+import Cars from './Cars.jsx';
 
 function App() {
    
   return(
     <>
-      <FoodList />
+      <Cars />
     </>
   );
 }
