@@ -1,0 +1,102 @@
+body{
+  background-color: #222; /* Make dark background */
+  color: #fff;
+}
+
+h1{
+  text-align: center;
+}
+
+.input-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.output-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-button{
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+#input{
+  padding: 10px 10px;
+  width: 200px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* --------------- List_ui ---------------  */
+
+
+.task-card{
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 5px;
+  width: 350px;
+  height: 50px;
+}
+
+.control-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.delete-list{
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  }
+
+      .delete-list:hover {
+        background-color: #821a24;
+      }
+
+.up-list, .down-list{
+  background-color: #92c7ff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  }
+
+    .up-list:hover, .down-list:hover {
+      background-color: #0056b3;
+    }
+      
+.to-do-text{
+  padding: 10px 0;
+  font-size: 1.1rem;
+  min-width: 180px;
+  word-break: break-word;
+  margin-right: 10px;
+  color: #222;
+  text-align: center;
+}

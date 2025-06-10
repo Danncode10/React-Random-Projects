@@ -10,11 +10,14 @@ function List_ui(
 ){
 
     return(
-        <div>
-            <p>{text}</p>
-            <button className="delete-list" onClick={() => deleteFunction(index)}>Delete</button>
-            <button className="up-list" onClick={() => moveUpFunction(index)}>⬆️</button>
-            <button className="down-list" onClick={() => moveDownFunction(index)}>⬇️</button>
+        <div className="task-card">
+            <p className="to-do-text">{text}</p>
+            <div className="control-section">
+                <button className="delete-list" onClick={() => deleteFunction(index)}>Delete</button>
+                <button className="up-list" onClick={() => moveUpFunction(index)}>⬆️</button>
+                <button className="down-list" onClick={() => moveDownFunction(index)}>⬇️</button>
+            </div>
+            
         </div>
     );
 }

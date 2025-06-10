@@ -29,7 +29,7 @@ function ToDoList(){
     }
 
     function handleMoveDown(index){
-        if(index >= tasks.length){
+        if(index >= tasks.length - 1){
             return;
         }
 
@@ -45,9 +45,13 @@ function ToDoList(){
     return(
         <div className="to-do-container">
             <h1>To-Do-List</h1>
-            <input type="text" id="input"></input>
-            <button className="add-button" onClick={handleAddTask}>Add</button>
-            {tasks.map((task, index) => (
+            <div className="input-section">
+                <input type="text" id="input" placeholder="Enter a task..."></input>
+                <button className="add-button" onClick={handleAddTask}>Add</button>
+            </div>
+            
+            <div className="output-section">
+                {tasks.map((task, index) => (
                 <List_ui
                     key={index}
                     index={index}
@@ -55,8 +59,10 @@ function ToDoList(){
                     deleteFunction={handleDeleteTask}
                     moveUpFunction = {handleMoveUp}
                     moveDownFunction = {handleMoveDown}
-                />
-))}
+                    />
+                ))}
+            </div>
+
         </div>
     );
 }
