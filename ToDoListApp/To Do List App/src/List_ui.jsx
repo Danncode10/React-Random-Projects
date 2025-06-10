@@ -2,10 +2,9 @@ import ToDoList from "./ToDoList";
 
 function List_ui(
     {
-        key = 0, //Default
         index = 0,
         text = "no text",
-        deleteFunction
+        deleteFunction, moveUpFunction, moveDownFunction
 
     }
 ){
@@ -14,7 +13,7 @@ function List_ui(
         <div>
             <p>{text}</p>
             <button className="delete-list" onClick={() => deleteFunction(index)}>Delete</button>
-            <button className="up-list">⬆️</button>
+            <button className="up-list" onClick={() => moveUpFunction(index)}>⬆️</button>
             <button className="down-list">⬇️</button>
         </div>
     );

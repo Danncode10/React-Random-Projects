@@ -8,12 +8,28 @@ function ToDoList(){
     function handleAddTask(){
         const newTask = document.getElementById("input").value;
         setTasks(prevTasks => [...prevTasks, newTask])
+
+        document.getElementById("input").value = "";
     }
 
     function handleDeleteTask(index){
         setTasks(prevTasks => prevTasks.filter((_, i) => i !== index));
     }
 
+    function handleMoveUp(index){
+        if (index === 0){
+            return;
+        }
+
+        setTasks(prevTasks => {
+            const newTasks = [...prevTasks];
+            [newTasks[index - 1], newTasks[index]] = [newTasks[index], newTasks[index - 1]];
+            return newTasks;
+        });
+    }
+
+
+    
     return(
         <div className="to-do-container">
             <h1>To-Do-List</h1>
@@ -25,6 +41,7 @@ function ToDoList(){
                     index={index}
                     text={task}
                     deleteFunction={handleDeleteTask}
+                    moveUpFunction = {handleMoveUp}
                 />
 ))}
         </div>
