@@ -1,10 +1,10 @@
-import ColorPicker from './ColorPicker/ColorPicker.jsx';
+import FoodList from './FoodList.jsx'
 
 function App() {
    
   return(
     <>
-      <ColorPicker />
+      <FoodList />
     </>
   );
 }
