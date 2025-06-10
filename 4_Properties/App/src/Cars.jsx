@@ -23,6 +23,7 @@ function Cars(){
     }
 
     function handleRemoveCar(index) {
+        setCars(prevCars => prevCars.filter((_, i) => i !== index));
     }
 
     function handleYearChange(event) {
@@ -66,8 +67,16 @@ function Cars(){
                 placeholder="Car Brand" 
                 value={carBrand} 
                 onChange={handleBrandChange}
+
+                onKeyDown={(event) => {
+                        if (event.key === 'Enter') {
+                            handleAddCar();
+                        }
+                    }}
             /><br />
-            <button onClick={handleAddCar}>Add Car</button>
+            <button onClick={handleAddCar}>
+                Add Car
+            </button>
         </div>
     );
 
