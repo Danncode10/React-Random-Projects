@@ -13,7 +13,7 @@ function List_ui(
     return(
         <div>
             <p>{text}</p>
-            <button className="delete-list" onClick={}>Delete</button>
+            <button className="delete-list" onClick={() => deleteFunction(index)}>Delete</button>
             <button className="up-list">⬆️</button>
             <button className="down-list">⬇️</button>
         </div>
