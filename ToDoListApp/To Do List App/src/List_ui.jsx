@@ -14,7 +14,7 @@ function List_ui(
             <p>{text}</p>
             <button className="delete-list" onClick={() => deleteFunction(index)}>Delete</button>
             <button className="up-list" onClick={() => moveUpFunction(index)}>⬆️</button>
-            <button className="down-list">⬇️</button>
+            <button className="down-list" onClick={() => moveDownFunction(index)}>⬇️</button>
         </div>
     );
 }

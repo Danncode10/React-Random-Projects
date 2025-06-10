@@ -28,8 +28,20 @@ function ToDoList(){
         });
     }
 
+    function handleMoveDown(index){
+        if(index >= tasks.length){
+            return;
+        }
 
-    
+        setTasks(prevTasks => {
+            const newTasks = [...prevTasks];
+            [newTasks[index], newTasks[index + 1]] = [newTasks[index + 1], newTasks[index]];
+            return newTasks;
+        });
+    }
+
+
+
     return(
         <div className="to-do-container">
             <h1>To-Do-List</h1>
@@ -42,6 +54,7 @@ function ToDoList(){
                     text={task}
                     deleteFunction={handleDeleteTask}
                     moveUpFunction = {handleMoveUp}
+                    moveDownFunction = {handleMoveDown}
                 />
 ))}
         </div>
