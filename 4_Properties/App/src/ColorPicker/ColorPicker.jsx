@@ -3,7 +3,7 @@ import styles from './ColorPicker.module.css';
 
 function ColorPicker(){
 
-    const [color, setColor] = useState("#ff0000");
+    const [color, setColor] = useState("#ffffff");
 
     function handleColorChange(event) {
         setColor(event.target.value);
