@@ -1,10 +1,10 @@
-import Cars from './Cars.jsx';
+import ComponentA from './ComponentA.jsx'
 
 function App() {
    
   return(
     <>
-      <Cars />
+      <ComponentA />
     </>
   );
 }
